@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="121" id="4ch-78-Yfj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="121" id="4ch-78-Yfj" customClass="MovieCell" customModule="Flixster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ch-78-Yfj" id="Yn1-2m-0vI">
@@ -64,6 +64,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="XRI-Pu-K72" secondAttribute="trailing" constant="16" id="myU-nW-cpZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieDescLabel" destination="eW3-Xy-pfh" id="zW8-9P-f1Q"/>
+                                            <outlet property="movieImageView" destination="jPU-QY-Yeh" id="ZVg-0Y-9ZG"/>
+                                            <outlet property="movieTitleLabel" destination="CoW-SG-bcQ" id="dkq-k2-aBE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -77,25 +82,13 @@
                             <constraint firstItem="b9h-qv-XUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b6m-tn-e9L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="b9h-qv-XUf" id="ZtC-0M-ZWG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
-        </scene>
-        <!--Detail View Controller-->
-        <scene sceneID="c28-Tr-pY1">
-            <objects>
-                <viewController id="JIK-iA-irA" customClass="DetailViewController" customModule="Flixster" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hzQ-vq-Kxj">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="FSM-lp-mj2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LQg-Uy-PDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="840" y="12"/>
         </scene>
     </scenes>
     <resources>
