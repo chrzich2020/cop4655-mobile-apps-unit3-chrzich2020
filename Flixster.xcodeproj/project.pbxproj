@@ -13,6 +13,8 @@
 		E105C1402AAF62E4009367F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E105C13E2AAF62E4009367F2 /* Main.storyboard */; };
 		E105C1422AAF62E6009367F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105C1412AAF62E6009367F2 /* Assets.xcassets */; };
 		E105C1452AAF62E6009367F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E105C1432AAF62E6009367F2 /* LaunchScreen.storyboard */; };
+		E105C14E2AAF63CD009367F2 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = E105C14D2AAF63CD009367F2 /* Nuke */; };
+		E1898DDA2AAF650F005D9433 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1898DD92AAF650E005D9433 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		E105C1412AAF62E6009367F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E105C1442AAF62E6009367F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E105C1462AAF62E6009367F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1898DD92AAF650E005D9433 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E105C14E2AAF63CD009367F2 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 		E105C1372AAF62E4009367F2 /* Flixster */ = {
 			isa = PBXGroup;
 			children = (
+				E105C14F2AAF6465009367F2 /* Models */,
 				E105C1382AAF62E4009367F2 /* AppDelegate.swift */,
 				E105C13A2AAF62E4009367F2 /* SceneDelegate.swift */,
 				E105C13C2AAF62E4009367F2 /* ViewController.swift */,
@@ -65,6 +70,14 @@
 				E105C1462AAF62E6009367F2 /* Info.plist */,
 			);
 			path = Flixster;
+			sourceTree = "<group>";
+		};
+		E105C14F2AAF6465009367F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1898DD92AAF650E005D9433 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +96,9 @@
 			dependencies = (
 			);
 			name = Flixster;
+			packageProductDependencies = (
+				E105C14D2AAF63CD009367F2 /* Nuke */,
+			);
 			productName = Flixster;
 			productReference = E105C1352AAF62E4009367F2 /* Flixster.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = E105C12C2AAF62E4009367F2;
+			packageReferences = (
+				E105C14C2AAF63CD009367F2 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = E105C1362AAF62E4009367F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +159,7 @@
 			files = (
 				E105C13D2AAF62E4009367F2 /* ViewController.swift in Sources */,
 				E105C1392AAF62E4009367F2 /* AppDelegate.swift in Sources */,
+				E1898DDA2AAF650F005D9433 /* Movie.swift in Sources */,
 				E105C13B2AAF62E4009367F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E105C14C2AAF63CD009367F2 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E105C14D2AAF63CD009367F2 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E105C14C2AAF63CD009367F2 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E105C12D2AAF62E4009367F2 /* Project object */;
 }
