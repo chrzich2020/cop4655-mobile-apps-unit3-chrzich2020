@@ -16,6 +16,7 @@
 		E105C14E2AAF63CD009367F2 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = E105C14D2AAF63CD009367F2 /* Nuke */; };
 		E132127C2AAF723D00139784 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E132127B2AAF723D00139784 /* MovieCell.swift */; };
 		E1898DDA2AAF650F005D9433 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1898DD92AAF650E005D9433 /* Movie.swift */; };
+		E1DAAB1D2AAF9702002E02DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAAB1C2AAF9702002E02DC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E105C1462AAF62E6009367F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E132127B2AAF723D00139784 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		E1898DD92AAF650E005D9433 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E1DAAB1C2AAF9702002E02DC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				E105C1412AAF62E6009367F2 /* Assets.xcassets */,
 				E105C1432AAF62E6009367F2 /* LaunchScreen.storyboard */,
 				E105C1462AAF62E6009367F2 /* Info.plist */,
+				E1DAAB1C2AAF9702002E02DC /* DetailViewController.swift */,
 			);
 			path = Flixster;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				E105C13D2AAF62E4009367F2 /* MovieViewController.swift in Sources */,
 				E105C1392AAF62E4009367F2 /* AppDelegate.swift in Sources */,
 				E132127C2AAF723D00139784 /* MovieCell.swift in Sources */,
+				E1DAAB1D2AAF9702002E02DC /* DetailViewController.swift in Sources */,
 				E1898DDA2AAF650F005D9433 /* Movie.swift in Sources */,
 				E105C13B2AAF62E4009367F2 /* SceneDelegate.swift in Sources */,
 			);
