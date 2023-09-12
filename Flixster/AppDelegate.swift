@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Flixster
 //
-//  Created by Tara Hrzich on 9/11/23.
+//  Created by Colin Hrzich on 9/11/23.
 //
 
 import UIKit
