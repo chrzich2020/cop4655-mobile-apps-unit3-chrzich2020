@@ -36,9 +36,9 @@ class DetailViewController: UIViewController {
         // Set labels with the associated track values.
         movieTitleLabel.text = movie.original_title
         movieDescLabel.text = movie.overview
-        movieAvgLabel.double = movie.vote_average
-        movieVoteLabel.int = movie.vote_count
-        moviePopLabel.double = movie.popularity
+        movieAvgLabel.text = String (movie.vote_average)
+        movieVoteLabel.text = String (movie.vote_count)
+        moviePopLabel.text = String (movie.popularity)
 
 
     }
