@@ -14,6 +14,9 @@
 		E105C1422AAF62E6009367F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105C1412AAF62E6009367F2 /* Assets.xcassets */; };
 		E105C1452AAF62E6009367F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E105C1432AAF62E6009367F2 /* LaunchScreen.storyboard */; };
 		E105C14E2AAF63CD009367F2 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = E105C14D2AAF63CD009367F2 /* Nuke */; };
+		E1320D7D2AB8BBF000936DEE /* PostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1320D7C2AB8BBF000936DEE /* PostersViewController.swift */; };
+		E1320D7F2AB8BED500936DEE /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1320D7E2AB8BED500936DEE /* Poster.swift */; };
+		E1320D812AB8C11000936DEE /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1320D802AB8C11000936DEE /* PosterCell.swift */; };
 		E132127C2AAF723D00139784 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E132127B2AAF723D00139784 /* MovieCell.swift */; };
 		E1898DDA2AAF650F005D9433 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1898DD92AAF650E005D9433 /* Movie.swift */; };
 		E1DAAB1D2AAF9702002E02DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAAB1C2AAF9702002E02DC /* DetailViewController.swift */; };
@@ -28,6 +31,9 @@
 		E105C1412AAF62E6009367F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E105C1442AAF62E6009367F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E105C1462AAF62E6009367F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1320D7C2AB8BBF000936DEE /* PostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersViewController.swift; sourceTree = "<group>"; };
+		E1320D7E2AB8BED500936DEE /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
+		E1320D802AB8C11000936DEE /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		E132127B2AAF723D00139784 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		E1898DD92AAF650E005D9433 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E1DAAB1C2AAF9702002E02DC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 				E105C13C2AAF62E4009367F2 /* MovieViewController.swift */,
 				E132127B2AAF723D00139784 /* MovieCell.swift */,
 				E105C13E2AAF62E4009367F2 /* Main.storyboard */,
+				E1320D802AB8C11000936DEE /* PosterCell.swift */,
+				E1320D7C2AB8BBF000936DEE /* PostersViewController.swift */,
 				E105C1412AAF62E6009367F2 /* Assets.xcassets */,
 				E105C1432AAF62E6009367F2 /* LaunchScreen.storyboard */,
 				E105C1462AAF62E6009367F2 /* Info.plist */,
@@ -82,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E1898DD92AAF650E005D9433 /* Movie.swift */,
+				E1320D7E2AB8BED500936DEE /* Poster.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,11 +172,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1320D7F2AB8BED500936DEE /* Poster.swift in Sources */,
 				E105C13D2AAF62E4009367F2 /* MovieViewController.swift in Sources */,
+				E1320D812AB8C11000936DEE /* PosterCell.swift in Sources */,
 				E105C1392AAF62E4009367F2 /* AppDelegate.swift in Sources */,
 				E132127C2AAF723D00139784 /* MovieCell.swift in Sources */,
 				E1DAAB1D2AAF9702002E02DC /* DetailViewController.swift in Sources */,
 				E1898DDA2AAF650F005D9433 /* Movie.swift in Sources */,
+				E1320D7D2AB8BBF000936DEE /* PostersViewController.swift in Sources */,
 				E105C13B2AAF62E4009367F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
