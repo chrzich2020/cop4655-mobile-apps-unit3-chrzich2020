@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  Flixster
 //
-//  Created by Tara Hrzich on 9/11/23.
+//  Created by Colin Hrzich on 9/11/23.
 //
 
 import UIKit
@@ -28,15 +28,17 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Load the image located at the `artworkUrl100` URL and set it on the image view.
-        Nuke.loadImage(with: movie.movieBackdrop, into: movieImageView)
+        let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w300/" + movie.backdrop_path.absoluteString)
+
+        // Load image async via Nuke library image loading helper method
+        Nuke.loadImage(with: backdropUrl!, into: movieImageView)
 
         // Set labels with the associated track values.
-        movieTitleLabel.text = movie.movieTitle
-        movieDescLabel.text = movie.movieDesc
-        movieAvgLabel.text = movie.voteAvg
-        movieVoteLabel.text = movie.voteCount
-        moviePopLabel.text = movie.popular
+        movieTitleLabel.text = movie.original_title
+        movieDescLabel.text = movie.overview
+        movieAvgLabel.double = movie.vote_average
+        movieVoteLabel.int = movie.vote_count
+        moviePopLabel.double = movie.popularity
 
 
     }

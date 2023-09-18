@@ -7,21 +7,27 @@
 
 import Foundation
 //Movie Model Struct
-struct Movie {
-    let movieTitle: String
-    let movieDesc: String
-    let artworkUrl100: URL
-    let voteAvg: String
-    let voteCount: String
-    let popular: String
-    let movieBackdrop: URL
+struct Movie: Decodable {
+    let original_title: String
+    let overview: String
+    let poster_path: URL
+    let vote_average: Double
+    let vote_count: Int
+    let popularity: Double
+    let backdrop_path: URL
 }
+
+struct MoviesResponse: Decodable {
+    let results: [Movie]
+}
+
+
 
 //Extension with data given
 extension Movie {
 
     /// An array of mock movies
-    static var mockMovie: [Movie]  = [
+   /* static var mockMovie: [Movie]  = [
         Movie(movieTitle: "Meg 2: The Trench", movieDesc: "An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.", artworkUrl100: URL(string:"https://image.tmdb.org/t/p/w500//4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg")!, voteAvg: "7", voteCount: "1595", popular: "5133.953", movieBackdrop: URL(string: "https://image.tmdb.org/t/p/w500//8pjWz2lt29KyVGoq1mXYu6Br7dE.jpg")!),
         Movie(movieTitle: "Barbie", movieDesc: "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.", artworkUrl100: URL(string:"https://image.tmdb.org/t/p/w500//iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg")!, voteAvg: "7.3", voteCount: "4060", popular: "3712.487", movieBackdrop: URL(string: "https://image.tmdb.org/t/p/w500//nHf61UzkfFno5X1ofIhugCPus2R.jpg")!),
         Movie(movieTitle: "Strays", movieDesc: "When Reggie is abandoned on the mean city streets by his lowlife owner, Doug, Reggie is certain that his beloved owner would never leave him on purpose. But once Reggie falls in with Bug, a fast-talking, foul-mouthed stray who loves his freedom and believes that owners are for suckers, Reggie finally realizes he was in a toxic relationship and begins to see Doug for the heartless sleazeball that he is.", artworkUrl100: URL(string:"https://image.tmdb.org/t/p/w500///n1hqbSCtyBAxaXEl1Dj3ipXJAJG.jpg")!, voteAvg: "7.4", voteCount: "172", popular: "1873.846", movieBackdrop: URL(string: "https://image.tmdb.org/t/p/w500//2ii07lSwHarg0gWnJoCYL3Gyd1j.jpg")!),
@@ -43,7 +49,7 @@ extension Movie {
         Movie(movieTitle: "The Equalizer 3", movieDesc: "Robert McCall finds himself at home in Southern Italy but he discovers his friends are under the control of local crime bosses. As events turn deadly, McCall knows what he has to do: become his friends' protector by taking on the mafia.", artworkUrl100: URL(string:"https://image.tmdb.org/t/p/w500///p0WBnzgyqxMxbF4UGiqTwBLnwht.jpg")!, voteAvg: "6.8", voteCount: "137", popular: "490.18", movieBackdrop: URL(string: "https://image.tmdb.org/t/p/w500//h0nmmdFAdBjQttN8Y0q825MWzZp.jpg")!),
         Movie(movieTitle: "Gran Turismo", movieDesc: "The ultimate wish-fulfillment tale of a teenage Gran Turismo player whose gaming skills won him a series of Nissan competitions to become an actual professional racecar driver.", artworkUrl100: URL(string:"https://image.tmdb.org/t/p/w500///51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg")!, voteAvg: "7.5", voteCount: "253", popular: "464.892", movieBackdrop: URL(string: "https://image.tmdb.org/t/p/w500//jv4tiXAgaArMQo57jFMjvBEjmoa.jpg")!),
     ]
-
+*/
     // We can now access this array of mock tracks anywhere like this:
     // let tracks = Tracks.mockTracks
 }
