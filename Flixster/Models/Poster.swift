@@ -7,10 +7,17 @@
 
 import Foundation
 
-struct PosterSearchResponse: Decodable {
-    let results: [Poster]
+struct Poster: Decodable {
+    let original_title: String
+    let overview: String
+    let poster_path: URL
+    let vote_average: Double
+    let vote_count: Int
+    let popularity: Double
+    let backdrop_path: URL
 }
 
-struct Poster: Decodable {
-    let poster_path: URL
+
+struct PosterSearchResponse: Decodable {
+    let results: [Poster]
 }

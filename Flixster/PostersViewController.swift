@@ -33,11 +33,12 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
     var posters: [Poster] = []
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         collectionView.dataSource = self
 
-        // Create a search URL for fetching albums (`entity=album`)
+       
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=7fe8575d801c504097239b6bf390e8c9")!
         let request = URLRequest(url: url)
 
@@ -73,20 +74,38 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
                 print("❌ Error parsing JSON: \(error.localizedDescription)")
             }
         }
+        
+        
 
         // Initiate the network request
         task.resume()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // TODO: Pt 1 - Pass the selected movie to the detail view controller
+        if let cell = sender as? UICollectionViewCell,
+            let indexPath = collectionView.indexPath(for: cell),
+            let detailViewController = segue.destination as? DetailViewController {
+
+            // Use the index path to get the associated movie
+            let selectedMovie = posters[indexPath.item] // Assuming 'movies' is your data source
+
+            // Set the movie on the detail view controller
+            detailViewController.poster = selectedMovie
+        }
     }
-    */
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Get the index path for the current selected collection view item (if exists)
+        if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+
+            // Deselect the item at the corresponding index path
+            collectionView.deselectItem(at: indexPath, animated: true)
+        }
+    }
+
+    
 
 }

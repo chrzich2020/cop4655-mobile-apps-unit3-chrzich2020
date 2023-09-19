@@ -24,22 +24,38 @@ class DetailViewController: UIViewController {
     // A property to store the track object.
     // We can set this property by passing along the track object associated with the track the user tapped in the table view.
     var movie: Movie!
+    var poster: Poster!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w300/" + movie.backdrop_path.absoluteString)
-
-        // Load image async via Nuke library image loading helper method
-        Nuke.loadImage(with: backdropUrl!, into: movieImageView)
-
-        // Set labels with the associated track values.
-        movieTitleLabel.text = movie.original_title
-        movieDescLabel.text = movie.overview
-        movieAvgLabel.text = String (movie.vote_average)
-        movieVoteLabel.text = String (movie.vote_count)
-        moviePopLabel.text = String (movie.popularity)
-
+        if let movie = movie {
+            let imageUrl = URL(string: "https://image.tmdb.org/t/p/w300/" + movie.backdrop_path.absoluteString)
+            
+            // Load image async via Nuke library image loading helper method
+            Nuke.loadImage(with: imageUrl!, into: movieImageView)
+            
+            // Set labels with the associated track values.
+            movieTitleLabel.text = movie.original_title
+            movieDescLabel.text = movie.overview
+            movieAvgLabel.text = String (movie.vote_average)
+            movieVoteLabel.text = String (movie.vote_count)
+            moviePopLabel.text = String (movie.popularity)
+        }
+        
+        if let poster = poster {
+            let posterUrl = URL(string: "https://image.tmdb.org/t/p/w300/" + poster.backdrop_path.absoluteString)
+            
+            // Load image async via Nuke library image loading helper method
+            Nuke.loadImage(with: posterUrl!, into: movieImageView)
+            
+            // Set labels with the associated track values.
+            movieTitleLabel.text = poster.original_title
+            movieDescLabel.text = poster.overview
+            movieAvgLabel.text = String (poster.vote_average)
+            movieVoteLabel.text = String (poster.vote_count)
+            moviePopLabel.text = String (poster.popularity)
+        }
 
     }
 
