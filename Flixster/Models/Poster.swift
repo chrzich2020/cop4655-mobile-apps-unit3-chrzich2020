@@ -2,7 +2,7 @@
 //  Posters.swift
 //  Flixster
 //
-//  Created by Tara Hrzich on 9/18/23.
+//  Created by Colin Hrzich on 9/18/23.
 //
 
 import Foundation
